@@ -58,6 +58,9 @@ const App = () => {
 
   return (
     <div>
+      DUPLA KATT AZ INDÍTÁSHOZ
+      <br />
+      SIMA KATT A FORGATÁSHOZ/LEÁLLÍTÁSHOZ
       <div className="container">
       <div
         className={inAnimation ? "cube animate" : "cube"}
