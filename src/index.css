@@ -59,6 +59,14 @@
     }
 }
 
+    .plate.ready {
+      animation: ready-blink 1s steps(1, start) infinite;
+    }
+
+    @keyframes ready-blink {
+      50% { color: rgba(255, 255, 255, 0.295); }
+    }
+
 @keyframes spin {
   0% {
     transform: translateX(0%) rotateX(-45deg) rotateZ(calc(var(--current-rotation) - 0deg));
