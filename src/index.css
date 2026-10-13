@@ -1,6 +1,6 @@
 :root{
     font-family: 'Courier New', Courier, monospace;
-    
+    user-select: none;
 }
 
 .container {
@@ -72,7 +72,7 @@
     transform: translateX(0%) rotateX(-45deg) rotateZ(calc(var(--current-rotation) - 0deg));
   }
   60% {
-    transform: translateX(50%) rotateX(-45deg) rotateZ(calc(var(--current-rotation) - 45deg));
+    transform:  translateX(50%) rotateX(-45deg) translateY(calc((sqrt(2) / 2 - 1) * 100%)) rotateZ(calc(var(--current-rotation) - 45deg)) ;
   }
   100% {
     transform: translateX(0%) rotateX(-45deg) rotateZ(calc(var(--current-rotation) - 90deg));
