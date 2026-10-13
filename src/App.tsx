@@ -72,7 +72,7 @@ const App = () => {
           "--current-rotation": `${-state * 90}deg`,
         } as CSSProperties}
       >
-        <div className="face front"><div className={!isRunning && !inAnimation && timeLeft > 0 ? "plate ready" : "plate"}>{minutes}:{seconds}</div></div>
+        <div className="face front"><div className={(inAnimation ? "animate " : "") + (!isRunning && !inAnimation && timeLeft > 0 ? "plate ready" : "plate")}>{minutes}:{seconds}</div></div>
         <div className="face back"></div>
         <div className="face right">5</div>
         <div className="face left">15</div>

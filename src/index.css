@@ -1,6 +1,7 @@
 :root{
     font-family: 'Courier New', Courier, monospace;
     user-select: none;
+  --spin-duration: 0.5s;
 }
 
 .container {
@@ -19,7 +20,7 @@
 }
 
 .cube.animate {
-  animation: spin 0.5s ease-in-out;
+  animation: spin var(--spin-duration) ease-in-out;
 }
 
 .face {
@@ -59,6 +60,10 @@
     }
 }
 
+.plate.animate {
+  animation: spin2 var(--spin-duration) ease-in-out;
+}
+
     .plate.ready {
       animation: ready-blink 1s steps(1, start) infinite;
     }
@@ -77,4 +82,8 @@
   100% {
     transform: translateX(0%) rotateX(-45deg) rotateZ(calc(var(--current-rotation) - 90deg));
   }
+}
+
+@keyframes spin2 {
+  100%{transform: rotateZ(90deg);}
 }
